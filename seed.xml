@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+	<!-- Device -->
+	<project name="Kanger-Team/android_device_google_seed" path="device/google/seed" remote="github" revision="aosp" />
+	<project name="LineageOS/android_device_cyanogen_msm8916-common" path="device/cyanogen/msm8916-common" remote="github" revision="lineage-16.0" />
+	<project name="Kanger-Team/kernel_google_seed" path="kernel/cyanogen/msm8916" remote="github" revision="master" />
+	<project name="Kanger-Team/android_vendor_google" path="vendor/google" remote="github" revision="aosp" />
+
+	<!-- Sepolicy -->
+	<project name="chil360/device_qcom_sepolicy-legacy" path="device/qcom/sepolicy-legacy" remote="github" revision="du-p9x" />
+
+	<!-- Device dependencies -->
+	<project name="LineageOS/android_system_tools_dtbtool" path="system/tools/dtbtool" remote="github" revision="lineage-16.0" />
+	<project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-16.0" />
+	<project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-16.0" />
+	<project path="system/qcom" name="DirtyUnicorns/android_system_qcom" remote="github" revision="p9x-caf" />
+
+	<!-- MSM8916 HALS -->
+	<project path="hardware/qcom/audio-caf/msm8916" name="chil360/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="du-p9x-caf-8916" />
+	<project path="hardware/qcom/display-caf/msm8916" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-16.0-caf-8916" />
+	<project path="hardware/qcom/media-caf/msm8916" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="lineage-16.0-caf-8916" />
+
+	<!-- FM Radio -->
+	<project path="hardware/qcom/fm" name="DirtyUnicorns/android_hardware_qcom_fm" remote="github" revision="p9x-caf" />
+	<project path="packages/apps/FMRadio" name="DirtyUnicorns/android_packages_apps_FMRadio" remote="github" revision="p9x-caf" />
+
+	<!-- Power HAL -->
+        <remove-project path="hardware/qcom/power" name="android_hardware_qcom_power" remote="du" revision="p9x-caf" />
+        <project path="hardware/qcom/power" name="GZOSP/hardware_qcom_power" remote="github" revision="9.0" />
+
+	<!-- ARM Developer GCC 8.3 kernel toolchain -->
+	<project name="chil360/prebuilts_gcc_linux-x86_arm_arm-eabi-8.3" path="prebuilts/gcc/linux-x86/arm/arm-eabi-8.3" remote="github" revision="master" />
+
+</manifest>
